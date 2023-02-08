@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Blood Donation {% endblock%}
+{% block content %}
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <center><form action = "{% url 'search' %}">
+    <select id="Bgroup" name="Group">
+      <option>Blood Group</option>
+      <option value="op"> {{op}} </option>
+      <option value="on"> {{on}} </option>
+      <option value="ap"> {{ap}} </option>
+      <option value="an"> {{an}} </option>
+      <option value="bp"> {{bp}} </option>
+      <option value="bn"> {{bn}} </option>
+      <option value="abp"> {{abp}} </option>
+      <option value="abn"> {{abn}} </option>
+  </select>
+  <input type="submit" name="search" value="Search" /></center>
+  
+  {% endblock %}
+  

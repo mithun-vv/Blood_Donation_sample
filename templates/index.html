@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Blood Donation {% endblock %}
+{% block content %}
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Blood Group</th>
+            <th>Last Donated</th>
+        </tr>
+        {% for d in di_search %}
+        <tr>
+            <th> {{ d.b_name }}</th>
+            <th> {{ d.b_fathers_name }}</th>
+            <th> {{ d.b_group }}</th>
+            <th> {{ d.b_donated }}</th>
+            {% endfor %}
+    </table>
+</body>
+
+{% endblock %}

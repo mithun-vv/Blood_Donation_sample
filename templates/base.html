@@ -1,0 +1,13 @@
+<html>
+<title>{% block title %} {% endblock %}</title>
+<link rel = "icon" type = "image/png" href = "https://cdn-icons-png.flaticon.com/512/4264/4264896.png">
+<ul id=menu>
+    <li><a href="{% url 'home' %}">Home</a>
+    <li><a href="{% url 'about'%}">About Me</a>
+    <li><a href="{% url 'contact'%}">Contact Us</a>
+    </ul>
+    <link rel="stylesheet" href="./static/css/style.css">
+
+{% block content %} {% endblock %}
+
+</html>
